@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body:before
+{
+    content: url('../img/historia.jpg');
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16em;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px #555;
+    opacity: 0.6;
+}
+.bg
+{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.bg h2
+{
+    position: relative;
+    color: #44c4c7;
+    font-size: 5em;
+    text-shadow: 0 0 10px #296f70,
+                0 0 40px #296f70,
+                0 0 80px #296f70,
+                0 0 160px #296f70,
+                0 0 20px #296f70;
+}
+section
+{
+    padding: 100px;
+}
+section h2
+{
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+section p
+{
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.navigation .borda4 
+{
+    border-bottom: 3px solid #de0611;
+}

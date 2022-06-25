@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    line-height: 1.5;
+    font-family: tahoma;
+    font-size: 71.5%;
+    color: #fff;
+    background-color: #1d1e22;
+}
+
+.scrolls{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.25em;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.scrolls .center{
+    font-size: 0.825rem;
+}
+
+.smooth{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    min-height: 59px;
+    font-size: 1rem;
+    background-image: linear-gradient(180deg, #221e1d, rgba(29,30,34,0.1), transparent);
+    mix-blend-mode: luminosity;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.header ul li{
+    margin: 0 1em;
+    padding: 1em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 599;
+    color: #fff;
+}
+
+.header ul li a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 599;
+    color: #fff;
+    font-size: 1em;
+}
+
+.header ul li a::after{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 3px;
+    transition: all 0.2s linear;
+}
+
+.header ul li a:hover::after{
+    width: 100%;
+    background-color: #fff;
+}
+
+section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-grow: column wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background-image: url(img/valorantmap.jpg);
+    background-size: cover;
+    scroll-snap-align: center;
+}
+
+.btn2{
+    position: relative;
+    padding: 15px 20px;
+    background: #382b3f;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #00fbff;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid #00fbff;
+}
+
+.btn2:hover
+{
+    letter-spacing: 4px;
+    background: #685e80;
+    color: #00fbff;
+}
+
+section:nth-child(2){
+    background-image: url(img/overwatch.jpg);
+}
+
+section:nth-child(3){
+    background-image: url(img/skyrim.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+section:nth-child(4){
+    background-image: url(img/uncharted.png);
+}
+
+.home a{
+    padding: 20px;
+    display: block;
+}
+
+
+/* Parte sobre */
+
+.card{
+    position: relative;
+    width: 700px;
+    height: 350px;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a2425;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.card:hover .circle:before{
+    background: linear-gradient(70deg, #1a2425, #a6bbb6);
+    clip-path: circle(400px at center);
+}
+
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.5s;
+    border-radius: 100%;
+}
+
+.card:hover img{
+    left: 90%;
+    height: 450px;
+}
+
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+.card .content p{
+    color: #fff;
+}
+
+.card .content a{
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: #111;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.card .content a:hover{
+    background-color: #bfd1cd;
+}
+
+/* Responsivo*/
+
+@media (max-width: 981px)
+{
+    .card
+    {
+        width: 640px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .card:hover
+    {
+        right: 35px;
+        height: 350px;
+    }   
+    .card .content
+    {
+        padding: 20px;
+    }
+    .card:hover img
+    {
+        top: 50%;
+        left: 85%;
+        height: 385px;
+    }
+}
+
+
+/* JOGOS */
+
+.box{
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    -top: 0;
+    -left: 0;
+    width: 100%;
+    height: 100%;
+    -transform-origin: center;
+    -transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004 );
+}
+
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #3db4b6;
+}
+
+
+/* CRÉDITOS */
+
+.container
+{
+    position: relative;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .cards
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(#1c6daf, #1c6daf 30%, #1d3548 30%, #1d3548);
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .cards .imgBx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 100000;
+    border-radius: 20px;
+    overflow: hidden;
+    transform-origin: top;
+}
+
+.container .cards:hover .imgBx
+{
+    transform: translateY(20px) scale(0.5);
+}
+
+.container .cards .imgBx img
+{   
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .cards .content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.container .cards:hover .content
+{
+    transform: translateY(0);
+}
+
+.container .cards .content .details
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container .cards .content .details h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.container .cards .content .details h2 span
+{
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #03a9f4;
+}
+
+.social_icons
+{
+    position: relative;
+    display: flex;
+}
+
+.social_icons li
+{
+    list-style: none;
+    margin: 4px;
+    bottom: 10px;
+}
+
+.social_icons li a
+{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #294d69;
+    border-radius: 50%;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.social_icons li a:hover
+{
+    transform: rotate(360deg);
+    background: #03a9f4;
+}
+
+h1{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}

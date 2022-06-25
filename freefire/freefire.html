@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Free Fire</title>
+    <style>
+        .navigation .borda1 {border-bottom: 3px solid #de0611;}
+    </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+    <ul class="navigation">
+        <li class="borda1"><a href="freefire.html">ínicio</a></li>
+        <li class="borda2"><a href="sobre.html">Sobre</a></li>
+        <li class="borda3"><a href="modos.html">Modos de jogo</a></li>
+        <li class="borda4"><a href="historia.html">História</a></li>
+        <li class="borda5"><a href="requisitos.html">Requisitos</a></li>
+    </ul>
+
+  </header>
+  <div class="banner">
+      <img src="img/fundo.jpeg" class="bg">
+      <div class="content">
+          <img src="img/logoTitle.png" class="movieTitle">
+          <h4>
+              <span>2017</span>
+              <span><i>13+</i></span>
+              <span>Battle royale</span>
+              <span>Ação</span>
+              <span>Celular - Mobile</span>
+          </h4>
+          <p>Free Fire é um dos jogos do estilo Battle Royale que fazem sucesso nos celulares. A mecânica básica de confronto em um grande mapa é a mesma encontrada em outros jogos do gênero, mas há espaço para novidades</p>
+          <div class="buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.dts.freefireth&hl=pt_BR&gl=US" target="_blank"><i class="fas fa-play"></i> Baixar</a>
+              <a href="tutorial.html"><i class="fas fa-book"></i> Tutorial</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="img/play.png">Assistir ao Trailer</a>
+    </div>
+  
+    <div class="trailer">
+      <video src="videos/FreeFireTrailer.mp4" controls="true" autoplay="true"></video>
+      <img src="img/close.png" alt="close" class="close" onclick="toggleVideo();">
+  </div>
+  
+  <script>
+      function toggleVideo(){
+          const trailer = document.querySelector('.trailer');
+          const video = document.querySelector('video');
+          trailer.classList.toggle('active')
+          video.currentTime = 0;
+          video.pause();
+      }
+  </script>
+</body>
+</html>
